@@ -6,7 +6,7 @@
     <title>Stock Control - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -15,12 +15,12 @@
         <form class="d-flex gap-4 col-8">
             <div class="col-5">
                 <label for="inputSearching" class="form-label">Search:</label>
-                <input type="text" class="form-control w-100">
+                <input type="text" class="form-control w-100" name="inputSearching" id="inputSearching">
             </div>
 
             <div class="col-2">
                 <label for="filters" class="form-label">Filter by:</label>
-                <select name="filters" class="form-select">
+                <select name="filters" id="filters" class="form-select">
                     <option selected disabled>Select..</option>
                     <option value="name">Name</option>
                     <option value="price">Price</option>
@@ -35,7 +35,7 @@
             <button type="submit" class="btn btn-primary h-50 mt-sm-auto"><i class="bi bi-search"></i> Search</button>
         </form>
 
-        <button class="btn btn-primary h-50 mt-sm-auto"><i class="bi bi-file-plus"></i> Add</button>
+        <button class="btn btn-primary h-50 mt-sm-auto" id="botaoAdd"><i class="bi bi-file-plus"></i> Add</button>
     </div>
 
     <div class="p-5">
@@ -53,26 +53,10 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Refrigerante Guaraná 2l</td>
-                    <td>7,99</td>
-                    <td>Guaraná</td>
-                    <td>Guaraná</td>
-                    <td>Indústria Brasileira de Bebidas S/A</td>
-                    <td>05/10/2026</td>
-                    <td>1200</td>
-                    <td class="d-flex gap-1">
-                        <a class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a>
-                        <a class="btn btn-sm btn-success"><i class="bi bi-pencil-square"></i></a>
-                        <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody id="products-tbody"></tbody>
         </table>
     </div>
-    <script src="/src/public/js/script.js"></script>
+    <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

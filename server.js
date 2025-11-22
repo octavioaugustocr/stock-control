@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const productRoutes = require('./src/routes/productRoutes');
+const path = require("node:path");
+app.use(express.static(path.join(__dirname, 'src', 'public')));
 app.use('/', productRoutes);
 
 app.listen(PORT, () => {
