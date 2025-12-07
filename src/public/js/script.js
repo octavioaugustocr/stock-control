@@ -1,3 +1,9 @@
+const buttonAdd = document.querySelector('#buttonAdd');
+        
+        buttonAdd.addEventListener('click', () => {
+            window.location.href = '/addProduct';
+        })
+
 function formatDate(isoDate) {
     const date = new Date(isoDate);
     const day = String(date.getDate()).padStart(2, '0');

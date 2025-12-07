@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
+router.get('/addProduct', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/addProduct.html'));
+});
+
+
 router.get('/products', ProductController.getAllProducts);
 
 module.exports = router;
